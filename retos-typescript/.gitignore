@@ -1,0 +1,2 @@
+#Para eviotar que haya tanto archivo .js dando vueltas por ahí
+*.js
