@@ -1,0 +1,21 @@
+import { MobileCollection } from "./mobileCollection";
+import { Mobile } from "./mobile";
+let mobile1 = new Mobile("iPhone", "Apple", "14 Plus", "Black", 1400);
+let mobile2 = new Mobile("Realme", "Realme INC", "7 Pro", "Grey", 500);
+let mobile3 = new Mobile("Samsung", "Samsung INC", "Galaxy Note Plus", "Green", 800);
+let mobile4 = new Mobile("Xiaomi", "Xiaomi INC", "Redme Plus 4k", "Red", 550);
+let myMobiles: Mobile[] = [mobile1, mobile2, mobile3, mobile4];
+let myCollection = new MobileCollection(myMobiles);
+
+console.log(myCollection.getMobile());
+console.log("Precio de la colección: ");
+console.log(myCollection.getPrice());
+console.log("The characteristics of the mobile name are: ");
+console.log(myCollection.printCollection()[0]);
+console.log("The characteristics of the mobile name are: ");
+console.log(myCollection.printCollection()[1]);
+console.log("The characteristics of the mobile name are: ");
+console.log(myCollection.printCollection()[2]);
+console.log("The characteristics of the mobile name are: ");
+console.log(myCollection.printCollection()[3]);
+console.log("Price overwall: " + myCollection.getPrice());
