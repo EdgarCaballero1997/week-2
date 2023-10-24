@@ -25,32 +25,17 @@ console.log(myRevert(listName));
 // Realizar una función que reciba como parámetro un array de strings que contenga
 // nombres de colores y te imprima en cada caso si el color está en el arcoíris o no.
 // La cabecera de la función tendrá el siguiente aspecto: function isRainbow(colors)
-let rojo = "Rojo";
-let naranja = "Naranja";
-let amarillo = "Amarillo";
-let verde = "Verde";
-let cian = "Cian";
-let azul = "Azul";
-let morado = "Morado";
-let rainbowColors = [rojo, naranja, amarillo, verde, cian, azul, morado];
 function isRainbow(colors: string[]){
-    let result: string[] = [];
-    for(let i = 0; i < rainbowColors.length; i++){
-        if(colors[i] == rainbowColors[i]){//No puedo usar el método .includes() en esta versión de TypeScript, la he intenado actualizar
-//desde el archivo tsconfig.json añadiendo "es2016" en la libreria de TypeScript, pero no da resultado, por lo que la única forma que he
-//encontrado de construir la función es comparando las posiciones de los arrays (lo mismo que hace el método .indexOf()). Esto quiere decir
-//que si pasas por parámetro un orden de colores distinto al orden de colores del array "rainbowColors" te dará false continuamente.            
-            result.push("¿El color '" + colors[i] + "' se encuentra en el arcoiris? --> " + true);
-            
+    let rainbowColors= ["Rojo", "Marrón", "Amarillo", "Beige", "Negro", "Azul", "Morado"];
+    for(let i = 0; i < colors.length; i++){
+        if(rainbowColors.indexOf(colors[i])!= -1){
+            console.log(`${colors[i]} está en el arcoiris`);
         }else{
-            result.push("¿El color '" + colors[i] + "' se encuentra en el arcoiris? --> " + false);
-            
+            console.log(`${colors[i]} no está en el arcoiris`);
         }
     }
-    return result;
 }
-let listaColores = ["Rojo", "Marrón", "Amarillo", "Beige", "Negro", "Azul", "Morado"];//Si os fijáis, los colores que SÍ coinciden con el
-//arcoiris están en el mismo índice que los colores del array "rainbowColor". No he encontrado otra manera de hacerlo sin usar el método .includes().
+let listaColores = ["Rosa", "Azul", "Amarillo"];
 console.log(isRainbow(listaColores));
 //Realizar una función que te devuelva la suma del numero de caracteres de las palabras almacenadas en un array.
 //La cabecera de la función tendrá el siguiente aspecto: function add(myWords).
