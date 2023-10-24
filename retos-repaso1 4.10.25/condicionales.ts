@@ -33,6 +33,7 @@ function zodiac(dia: number, mes: string){
     }else if((dia >= 22 && dia <= 30 && mes == "Noviembre") || dia >= 1 && dia <= 21 && mes == "Diciembre"){
         result = "Tu signo zodiacal es: sagitario";
     }
+    return result;
 }
 zodiac(21, "Diciembre");
 zodiac(1, "Enero");
