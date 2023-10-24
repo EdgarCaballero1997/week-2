@@ -25,7 +25,7 @@ export class Point{
 // 5. Crear un método toString() que convierta a texto las coordenadas del punto.
 // Debe devolver: “(x,y)”
     toString(x: number, y: number){
-        return `(${x}, ${y})`;
+        return `(${this.n}, ${this.y})`;
     }
 // Crear un método denominado distanceToOrigin():number que devuelva la distancia del
 // punto al origen de coordenadas (0,0).
@@ -43,17 +43,19 @@ export class Point{
 // Programa un método denominado calculateQuadrant():number que devuelva el
 // cuadrante en el que se encuentra el punto.
     calculateQuadrant(){
-        if(this.n === 0 || this.y === 0){
-            return 0;
-        }else if(this.n > 0 && this.y > 0){
-            return 1;
-        }else if(this.n < 0 && this.y > 0){
-            return 2;
-        }else if(this.n < 0 && this.y < 0){
-            return 3;
-        }else if(this.n > 0 && this.y < 0){
-            return 4;
+        let result: number = 0;
+        if(this.getN() === 0 || this.getY() === 0){
+            result = 0;
+        }else if(this.getN() > 0 && this.getY() > 0){
+            result = 1;
+        }else if(this.getN() < 0 && this.getY() > 0){
+            result = 2;
+        }else if(this.getN()< 0 && this.getY() < 0){
+            result = 3;
+        }else if(this.getN() > 0 && this.getY() < 0){
+            result = 4;
         }
+        return result;
     }
 // Programa un método denominado calculateNearest(points : Point[]) : Point, que reciba
 // como parámetro un array de objetos de la clase Point y devuelva una referencia al objeto

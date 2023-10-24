@@ -5,45 +5,85 @@
 
 // La fecha de nacimiento vendrá indicada por dos números: dia y mes.
 // La cabecera de la función tendrá el siguiente aspecto: function zodiac(day, month)
+let aries = "Aries";
+let tauro = "Tauro";
+let geminis = "Géminis";
+let cancer = "Cáncer";
+let leo = "Leo";
+let virgo = "Virgo";
+let libra = "Libra";
+let escorpio = "Escorpio";
+let sagitario = "Sagitario";
+let capricornio = "Capricornio";
+let acuario = "Acuario";
+let piscis = "Piscis";
 function zodiac(dia: number, mes: string){
-    let result = "";
     if((dia >= 22 && dia <= 30 && mes == "Diciembre") || dia >= 1 && dia <= 19 && mes == "Enero"){
-        result = "Tu signo zodiacal es: capricornio";
+        console.log("Tu signo zodiacal es: " + capricornio);
     }else if((dia >= 20 && dia <= 30 && mes == "Enero") || dia >= 1 && dia <= 18 && mes == "Febrero"){
-        result = "Tu signo zodiacal es: acuario";
+        console.log("Tu signo zodiacal es: " + acuario);
     }else if((dia >= 19 && dia <= 30 && mes == "Febrero") || dia >= 1 && dia <= 20 && mes == "Marzo"){
-        result = "Tu signo zodiacal es: piscis";
+        console.log("Tu signo zodiacal es: " + piscis);
     }else if((dia >= 21 && dia <= 30 && mes == "Marzo") || dia >= 1 && dia <= 19 && mes == "Abril"){
-        result = "Tu signo zodiacal es: aries";
+        console.log("Tu signo zodiacal es: " + aries);
     }else if((dia >= 20 && dia <= 30 && mes == "Abril") || dia >= 1 && dia <= 20 && mes == "Mayo"){
-        result = "Tu signo zodiacal es: tauro";
+        console.log("Tu signo zodiacal es: " + tauro);
     }else if((dia >= 21 && dia <= 30 && mes == "Mayo") || dia >= 1 && dia <= 20 && mes == "Junio"){
-        result = "Tu signo zodiacal es: geminis";
+        console.log("Tu signo zodiacal es: " + geminis);
     }else if((dia >= 21 && dia <= 30 && mes == "Junio") || dia >= 1 && dia <= 22 && mes == "Julio"){
-        result = "Tu signo zodiacal es: cancer";
-    }else if((dia >= 23 && dia <= 30 && mes == "Julio") || dia >= 1 && dia <= 22 && mes == "Agosto"){
-        result = "Tu signo zodiacal es: leo";
+        console.log("Tu signo zodiacal es: " + cancer);
+    }else if ((dia >= 23 && dia <= 30 && mes == "Julio") || dia >= 1 && dia <= 22 && mes == "Agosto"){
+        console.log("Tu signo zodiacal es: " + leo);
     }else if((dia >= 23 && dia <= 30 && mes == "Agosto") || dia >= 1 && dia <= 22 && mes == "Septiembre"){
-        result = "Tu signo zodiacal es: virgo";
+        console.log("Tu signo zodiacal es: " + virgo);
     }else if((dia >= 23 && dia <= 30 && mes == "Sepriembre") || dia >= 1 && dia <= 22 && mes == "Octubre"){
-        result = "Tu signo zodiacal es: libra";
+        console.log("Tu signo zodiacal es: " + libra);
     }else if((dia >= 23 && dia <= 30 && mes == "Octubre") || dia >= 1 && dia <= 21 && mes == "Noviembre"){
-        result = "Tu signo zodiacal es: escorpio";
+        console.log("Tu signo zodiacal es: " + escorpio);
     }else if((dia >= 22 && dia <= 30 && mes == "Noviembre") || dia >= 1 && dia <= 21 && mes == "Diciembre"){
-        result = "Tu signo zodiacal es: sagitario";
+        console.log("Tu signo zodiacal es: " + sagitario);
     }
-    return result;
 }
-console.log(zodiac(21, "Diciembre"));
-console.log(zodiac(1, "Enero"));
+zodiac(21, "Diciembre");
+zodiac(1, "Enero");
 // Realizar un procedimiento que dado el nombre de un país te imprima en que continente
 // estás. (Max 5 países por continente).
 // La cabecera del procedimiento tendrá el siguiente aspecto: function continent(country).
-let europa = ["España", "Francia", "Portugal", "Alemania", "Liberland"];
-let america = ["Estados Unidos", "Mexico", "Colombia", "Argentina", "Cuba"];
-let asia = ["China", "India", "Hong Kong", "Singapur", "Taiwan"];
-let oceania = ["Australia", "Nueva Zelanda", "Fiyi", "Samoa", "Tonga"];
-let africa = ["Marruecos", "Guinea Ecuatorial", "Argelia", "Tunez", "Congo"];
+let españa = "España";
+let francia = "Francia";
+let portugal = "Portugal";
+let alemania = "Alemania";
+let liberland = "Liberland";
+let europa = [españa, francia, portugal, alemania, liberland];
+
+let eeuu = "Estados Unidos";
+let mexico = "Mexico";
+let colombia = "Colombia";
+let argentina = "Argentina";
+let cuba = "Cuba";
+let america = [eeuu, mexico, colombia, argentina, cuba];
+
+let china = "China";
+let india = "India";
+let hongKong = "Hong Kong";
+let singapur = "Singapur";
+let taiwan = "Taiwan";
+let asia = [china, india, hongKong, singapur, taiwan];
+
+let australia = "Australia";
+let nuevaZelanda = "Nueva Zelanda";
+let fiyi = "Fiyi";
+let samoa = "Samoa";
+let tonga = "Tonga";
+let oceania = [australia, nuevaZelanda, fiyi, samoa, tonga];
+
+let marruecos = "Marruecos";
+let guineaEcuatorial = "Guinea Ecuatorial";
+let argelia = "Argelia";
+let tunez = "Tunez";
+let congo = "Congo";
+let africa = [marruecos, guineaEcuatorial, argelia, tunez, congo];
+
 function continent(country: string){
     if(europa.indexOf(country) !== -1){
         console.log("Estás en el continente europeo. Estos son algunos de sus países: " + europa);
@@ -65,15 +105,14 @@ continent("Mexico");
 // 4. Realizar una función que te imprima por consola el siguiente mensaje:
 // - “El numero es par”, si el numero introducido como parámetro de entrada es par
 // - “El numero es impar”, si el numero introducido como parámetro de entrada es impar
+
 // 5. La cabecera de la función tendrá el siguiente aspecto: function isEven(number)
 function isEven(number: number){
-    let result: string = "";
     if(number % 2 == 0){
-        result = number + " es un número par.";
+        console.log(number + " es un número par.");
     }else if(number % 2 != 0){
-        result = number + " es un número impar.";
+        console.log(number + " es un número impar.");
     }
-    return result;
 }
-console.log(isEven(4));
-console.log(isEven(5));
+isEven(4);
+isEven(5);

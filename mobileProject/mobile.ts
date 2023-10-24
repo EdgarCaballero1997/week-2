@@ -38,19 +38,19 @@ export class Mobile{
         return this.price;
     }
     setName(name: string){
-        return this.name = name;
+        this.name = name;
     }
     setTrademark(trademark: string){
-        return this.trademark = trademark;
+        this.trademark = trademark;
     }
     setModel(model: string){
-        return this.model = model;
+        this.model = model;
     }
     setColor(color: string){
-        return this.color = color;
+        this.color = color;
     }
     setPrice(price: number){
-        return this.price = price;
+        this.price = price;
     }
 // 1. Crear un nuevo método que imprima por consola todas las características de la clase
 // siguiendo el siguiente patrón:
@@ -61,12 +61,12 @@ export class Mobile{
 // • Color: color
 // • Price: price
     mobileCharacteristics(){
-        return `The characteristics of the mobile name are: 
-        Name: ${this.name}
-        Trademark: ${this.trademark}
-        Model: ${this.model}
-        Color: ${this.color}
-        Price: ${this.price}`;
-        
+        return `
+        The characteristics of the mobile name are:
+        Name: ${this.name},
+        Trademark: ${this.trademark},
+        Model: ${this.model},
+        Color: ${this.color},
+        Price: ${this.price}.`
     }
 }

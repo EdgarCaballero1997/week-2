@@ -16,12 +16,12 @@ var Triangle = /** @class */ (function () {
     // 4. Programa el método calculateLengthSides() : number[] que debe devolver un array de tres posiciones,
     // cada una de las cuales debe ser la longitud de uno de los lados del triángulo.
     // NOTA: Para ello es importante usar el método calculateDistance de la clase Point.
-    Triangle.prototype.calculateLengthSides = function (point1, point2, point3) {
-        var longitudLado1 = point1.calculateDistance(point2);
-        var longitudLado2 = point2.calculateDistance(point3);
-        var longitudLado3 = point3.calculateDistance(point1);
-        var arrayLados = [longitudLado1, longitudLado2, longitudLado3];
-        return arrayLados;
+    Triangle.prototype.calculateLengthSides = function () {
+        var vertices = [];
+        vertices.push(this.vertex1.calculateDistance(this.vertex2));
+        vertices.push(this.vertex2.calculateDistance(this.vertex3));
+        vertices.push(this.vertex3.calculateDistance(this.vertex1));
+        return vertices;
     };
     return Triangle;
 }());
