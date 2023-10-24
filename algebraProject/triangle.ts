@@ -17,14 +17,11 @@ export class Triangle{
 // 4. Programa el método calculateLengthSides() : number[] que debe devolver un array de tres posiciones,
 // cada una de las cuales debe ser la longitud de uno de los lados del triángulo.
 // NOTA: Para ello es importante usar el método calculateDistance de la clase Point.
-    calculateLengthSides(point1: Point, point2: Point, point3: Point): number[]{//Si no le metía parámetros no había manera de encontrar
-//la forma de mandar la instanciación realizada en el archivo "triangleTest.ts", por lo menos no había una manera que yo conociera, por
-//lo que después de estar 30-40 minutos buscando información en internet sin hayar respuesta decidí meterle 3 parámetros. Háganme saber
-//si está mal. En cualquier caso, tengo un amigo que siempre me dice: si el código te arroja lo que esperabas que te arroje, no lo toques xD.
-        let longitudLado1 = point1.calculateDistance(point2);
-        let longitudLado2 = point2.calculateDistance(point3);
-        let longitudLado3 = point3.calculateDistance(point1);
-        let arrayLados = [longitudLado1, longitudLado2, longitudLado3];
-        return arrayLados;
+    calculateLengthSides(): number[]{
+        let vertices: number[] = []
+        vertices.push(this.vertex1.calculateDistance(this.vertex2));
+        vertices.push(this.vertex2.calculateDistance(this.vertex3));
+        vertices.push(this.vertex3.calculateDistance(this.vertex1));
+        return vertices;
     }
 }

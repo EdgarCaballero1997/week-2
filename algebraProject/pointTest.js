@@ -9,9 +9,9 @@ var anotherPoint = new point_1.Point(8, 9);
 console.log(punto1.distanceToOrigin());
 console.log(punto1.calculateDistance(anotherPoint));
 // Modificar el fichero pointTest.ts para probar este nuevo método (calculateQuadrant())
-var punt0 = new point_1.Point(0, 4);
+var punt0 = new point_1.Point(-1, 4);
 console.log(punt0.calculateQuadrant());
-//-------------
+//Modificar el fichero pointTest para probar este nuevo método:
 //Punto actual:
 var punto = new point_1.Point(0, 4);
 //Objetos:
